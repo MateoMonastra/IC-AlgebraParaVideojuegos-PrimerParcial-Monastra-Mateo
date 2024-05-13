@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
-using System;
 
-namespace CustomMath
+namespace MathDebbuger
 {
     public struct Vec3 : IEquatable<Vec3>
     {

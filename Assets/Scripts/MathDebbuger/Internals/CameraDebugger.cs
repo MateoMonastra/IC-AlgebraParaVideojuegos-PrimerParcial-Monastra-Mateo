@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 using UnityEditor;
+using UnityEngine;
 
-namespace MathDebbuger
+namespace MathDebbuger.Internals
 {
     public struct VectorArrow
     {

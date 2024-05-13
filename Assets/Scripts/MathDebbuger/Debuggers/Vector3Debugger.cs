@@ -1,9 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 using MathDebbuger.Internals;
+using MathDebbuger.Internals.Internals;
+using UnityEngine;
 
-namespace MathDebbuger
+namespace MathDebbuger.Debuggers
 {
     public static class Vector3Debugger
     {
