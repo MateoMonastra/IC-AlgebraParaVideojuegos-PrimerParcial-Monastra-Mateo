@@ -15,40 +15,13 @@ namespace MathDebbuger
 
         [Header("Doors: ")] [SerializeField] public List<Door> doors;
 
-        private Transform player;
-        
-        // Start is called before the first frame update
-
-        private void Start()
-        {
-            player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        }
-
-        void Update()
-        {
-            if (!CheckPlayerIsInside(player))
-            {
-                foreach (MeshRenderer renderer in transform.GetComponentsInChildren<MeshRenderer>())
-                {
-                    renderer.enabled = false;
-                }
-            }
-            else
-            {
-                foreach (MeshRenderer renderer in transform.GetComponentsInChildren<MeshRenderer>())
-                {
-                    renderer.enabled = true;
-                }
-            }
-        }
-
-        private bool CheckPlayerIsInside(Transform player)
+        public bool CheckIsPointInside(Transform position)
         {
             int count = 0;
             
             foreach (Wall wall in roomWalls)
             {
-                if (wall.IsOnSide(player))
+                if (wall.IsOnSide(position))
                 {
                     count++;
                 }
