@@ -241,6 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!1 &47552499
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,6 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!65 &60191931
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -595,6 +597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!1 &144704900
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,6 +716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!1 &161384437
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,6 +835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!1 &253721013
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,6 +954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!1 &263246844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,6 +1073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!1 &358929299
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,6 +1192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!1 &381901152
 GameObject:
   m_ObjectHideFlags: 0
@@ -1321,6 +1329,7 @@ MonoBehaviour:
   doors:
   - {fileID: 47552504}
   - {fileID: 1004840793}
+  floor: []
 --- !u!4 &450158922
 Transform:
   m_ObjectHideFlags: 0
@@ -1407,6 +1416,7 @@ MonoBehaviour:
   doors:
   - {fileID: 1429517378}
   - {fileID: 47552504}
+  floor: []
 --- !u!1 &535576687
 GameObject:
   m_ObjectHideFlags: 0
@@ -1525,6 +1535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!1 &562609066
 GameObject:
   m_ObjectHideFlags: 0
@@ -1572,6 +1583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!65 &562609069
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1761,6 +1773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!1 &611208096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1879,6 +1892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!1 &641029972
 GameObject:
   m_ObjectHideFlags: 0
@@ -2057,6 +2071,7 @@ MonoBehaviour:
   - {fileID: 1341439834}
   doors:
   - {fileID: 641029977}
+  floor: []
 --- !u!1 &798192649
 GameObject:
   m_ObjectHideFlags: 0
@@ -2175,6 +2190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!1 &880403579
 GameObject:
   m_ObjectHideFlags: 0
@@ -2293,6 +2309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!1 &920616058
 GameObject:
   m_ObjectHideFlags: 0
@@ -2411,6 +2428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!1 &948418373
 GameObject:
   m_ObjectHideFlags: 0
@@ -2529,6 +2547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!1 &976518630
 GameObject:
   m_ObjectHideFlags: 0
@@ -2647,6 +2666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!1 &982975695
 GameObject:
   m_ObjectHideFlags: 0
@@ -2765,6 +2785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!1 &1004840788
 GameObject:
   m_ObjectHideFlags: 0
@@ -2915,6 +2936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!65 &1057392817
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3119,6 +3141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!1 &1117018136
 GameObject:
   m_ObjectHideFlags: 0
@@ -3151,6 +3174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!65 &1117018138
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3565,6 +3589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!1 &1266245972
 GameObject:
   m_ObjectHideFlags: 0
@@ -3683,6 +3708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!1 &1316413379
 GameObject:
   m_ObjectHideFlags: 0
@@ -3946,6 +3972,7 @@ MonoBehaviour:
   doors:
   - {fileID: 1004840793}
   - {fileID: 641029977}
+  floor: []
 --- !u!1 &1429517373
 GameObject:
   m_ObjectHideFlags: 0
@@ -4182,6 +4209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!1 &1859149625
 GameObject:
   m_ObjectHideFlags: 0
@@ -4405,6 +4433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!1 &1932124324
 GameObject:
   m_ObjectHideFlags: 0
@@ -4523,6 +4552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!1 &2032541258
 GameObject:
   m_ObjectHideFlags: 0
@@ -4583,6 +4613,7 @@ MonoBehaviour:
   - {fileID: 504086314}
   doors:
   - {fileID: 1429517378}
+  floor: []
 --- !u!1 &2046165980
 GameObject:
   m_ObjectHideFlags: 0
@@ -4701,6 +4732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!1 &2131490026
 GameObject:
   m_ObjectHideFlags: 0
@@ -4819,6 +4851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!1 &2140443970
 GameObject:
   m_ObjectHideFlags: 0
@@ -4834,7 +4867,7 @@ GameObject:
   - component: {fileID: 2140443971}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5174,6 +5207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

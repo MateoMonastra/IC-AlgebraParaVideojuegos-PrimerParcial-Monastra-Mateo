@@ -1,3 +1,4 @@
+using System;
 using UnityEditor;
 using UnityEngine;
 
@@ -5,7 +6,7 @@ namespace MathDebbuger
 {
     public class Wall : MonoBehaviour
     {
-        private MyPlane plane;
+        public MyPlane plane;
         // Start is called before the first frame update
         void Start()
         {
@@ -19,6 +20,11 @@ namespace MathDebbuger
                 Gizmos.color = new Color(1, 0, 1, 1f);
                 Gizmos.DrawLine(transform.position, transform.position + plane.Normal );
             }
+        }
+
+        public bool IsOnSide(Transform player)
+        {
+            return plane.GetSide(new Vec3(player.position));
         }
     }
 }

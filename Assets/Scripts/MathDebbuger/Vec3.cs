@@ -233,7 +233,7 @@ namespace MathDebbuger
 
         public static float Distance(Vec3 a, Vec3 b)
         {
-            return a.magnitude - b.magnitude;
+            return (a - b).magnitude;
         }
 
         public static float Dot(Vec3 a, Vec3 b)
@@ -241,6 +241,10 @@ namespace MathDebbuger
             return a.x * b.x + a.y * b.y + a.z * b.z;
         }
 
+        public static float Dot(Vec3 a, Vector3 b)
+        {
+            return a.x * b.x + a.y * b.y + a.z * b.z;
+        }
         public static Vec3 Lerp(Vec3 a, Vec3 b, float t)
         {
             t = Mathf.Clamp01(t);
@@ -338,5 +342,6 @@ namespace MathDebbuger
         {
             return vector / vector.magnitude;
         }
+
     }
 }

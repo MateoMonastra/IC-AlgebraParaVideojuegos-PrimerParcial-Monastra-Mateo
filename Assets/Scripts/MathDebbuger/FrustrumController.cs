@@ -16,7 +16,7 @@ namespace MathDebbuger
 
         [Header("LINES: ")] 
         
-        private List<Lines> lines;
+        private List<Line> lines;
         [SerializeField] private int linesAmount;
         [SerializeField] private int circleAmount;
         [SerializeField] private int circleDistance;
@@ -112,13 +112,7 @@ namespace MathDebbuger
 
                 for (int i = 0; i < linesAmount; i++)
                 {
-                    Gizmos.DrawLine(lines[i].startPos * i, lines[i].finalPos * i);
-                    
-                    for (int j = 1; i <= circleAmount; j++)
-                    {
-                        Gizmos.color = new Color(0, 0, 1, 1f);
-                        Gizmos.DrawSphere(lines[i].startPos * j, circleRadius);
-                    }
+                    lines[i].Draw();
                 }
             }
         }
