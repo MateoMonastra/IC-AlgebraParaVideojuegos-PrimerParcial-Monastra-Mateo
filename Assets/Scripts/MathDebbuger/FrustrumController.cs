@@ -11,14 +11,15 @@ namespace MathDebbuger
         [SerializeField] int screenHeight;
 
         [SerializeField] float fieldOfViewAngle;
-        public float verticalfieldOfViewAngle;
         [SerializeField] float nearClippingPlane;
         [SerializeField] float renderingDistance;
+        public float verticalfieldOfViewAngle;
 
-        [Header("LINES: ")] [SerializeField] private int linesAmount;
+        [Header("LINES: ")] 
+        [SerializeField] private int linesAmount;
         [SerializeField] private int amountPoints;
-        [SerializeField] private float circleSpacing;
-        private List<Line> lines = new List<Line>();
+        [SerializeField] private float pointSpacing;
+        public List<Line> lines = new List<Line>();
 
         float aspectRatio;
         // Start is called before the first frame update
@@ -230,7 +231,7 @@ namespace MathDebbuger
                     var newNear = (Vec3.Lerp(nearLeftPoint, nearRightPoint, t));
                     var newFar = (Vec3.Lerp(farLeftPoint, farRightPoint, t));
 
-                    var newLine = new Line(newNear, newFar, amountPoints, circleSpacing);
+                    var newLine = new Line(newNear, newFar, amountPoints, pointSpacing);
                     listAux.Add(newLine);
                 }
 
@@ -245,7 +246,7 @@ namespace MathDebbuger
                     var newNear = (Vec3.Lerp(nearLeftPoint, nearRightPoint, t));
                     var newFar = (Vec3.Lerp(farLeftPoint, farRightPoint, t));
 
-                    lines[i].UpdateLine(newNear, newFar, amountPoints, circleSpacing);
+                    lines[i].UpdateLine(newNear, newFar, amountPoints, pointSpacing);
                 }
             }
         }

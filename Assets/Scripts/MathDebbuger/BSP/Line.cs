@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using MathDebbuger.BSP;
 using UnityEditor;
 using UnityEngine;
 
@@ -7,7 +8,7 @@ namespace MathDebbuger
 {
     public class Line
     {
-        private List<Vec3> points = new List<Vec3>();
+        public List<Point> points = new List<Point>();
         public Vec3 startPos;
         public Vec3 finalPos;
 
@@ -32,12 +33,12 @@ namespace MathDebbuger
 
             if (points.Count != amountPoints)
             {
-                List<Vec3> listAux = new List<Vec3>();
+                List<Point> listAux = new List<Point>();
                 for (int i = 0; i < amountPoints; i++)
                 {
                     var place = Vec3.Lerp(startPos, finalPos, spacing * (i + 1));
 
-                    var newPoint = new Vec3(place);
+                    var newPoint = new Point(place);
                     listAux.Add(newPoint);
                 }
 
@@ -47,7 +48,7 @@ namespace MathDebbuger
             {
                 for (int i = 0; i < amountPoints; i++)
                 {
-                    points[i] = Vec3.Lerp(startPos, finalPos, spacing * (i + 1));
+                    points[i] = new Point(Vec3.Lerp(startPos, finalPos, spacing * (i)));
                 }
             }
         }
@@ -61,7 +62,7 @@ namespace MathDebbuger
             foreach (var point in points)
             {
                 Gizmos.color = new Color(0, 0, 1, 1f);
-                Gizmos.DrawSphere(point, 0.2f);
+                Gizmos.DrawSphere(point.position, point.radius);
             }
         }
     }
