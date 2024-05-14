@@ -14,13 +14,11 @@ namespace MathDebbuger
         [SerializeField] float nearClippingPlane;
         [SerializeField] float renderingDistance;
 
-        [Header("LINES: ")] 
-        
-        private List<Line> lines;
-        [SerializeField] private int linesAmount;
+        [Header("LINES: ")] [SerializeField] private int linesAmount;
         [SerializeField] private int circleAmount;
         [SerializeField] private int circleDistance;
         [SerializeField] private float circleRadius;
+        private List<Line> lines = new List<Line>();
 
         [SerializeField] float aspectRatio;
         // Start is called before the first frame update
@@ -47,6 +45,7 @@ namespace MathDebbuger
         void Start()
         {
             SetVertices();
+            SetLines();
         }
 
         void Update()
@@ -80,13 +79,15 @@ namespace MathDebbuger
             // Calculations needed to obtain each vertex of the planes
             nearUpperLeftVertex = nearLimit - fixedNearCenterX + fixedNearCenterY;
             nearUpperRightVertex = nearLimit + fixedNearCenterX + fixedNearCenterY;
-            nearLowerLeftVertex =nearLimit - fixedNearCenterX - fixedNearCenterY;
-            nearLowerRightVertex =nearLimit + fixedNearCenterX - fixedNearCenterY;
+            nearLowerLeftVertex = nearLimit - fixedNearCenterX - fixedNearCenterY;
+            nearLowerRightVertex = nearLimit + fixedNearCenterX - fixedNearCenterY;
 
             farUpperLeftVertex = farLimit - fixedFarCenterX + fixedFarCenterY;
-            farUpperRightVertex =farLimit + fixedFarCenterX + fixedFarCenterY;
+            farUpperRightVertex = farLimit + fixedFarCenterX + fixedFarCenterY;
             farLowerLeftVertex = farLimit - fixedFarCenterX - fixedFarCenterY;
-            farLowerRightVertex =farLimit + fixedFarCenterX - fixedFarCenterY;
+            farLowerRightVertex = farLimit + fixedFarCenterX - fixedFarCenterY;
+
+            SetLines();
         }
 
         private void OnDrawGizmos()
@@ -110,14 +111,14 @@ namespace MathDebbuger
                     Gizmos.DrawLine(point, point + GetFaceNormal(faceIndex));
                 }
 
-                for (int i = 0; i < linesAmount; i++)
+                foreach (var line in lines)
                 {
-                    lines[i].Draw();
+                    line.Draw();
                 }
             }
         }
 
-        void DrawFrustumLines()
+        private void DrawFrustumLines()
         {
             Gizmos.DrawLine(nearUpperLeftVertex, farUpperLeftVertex);
             Gizmos.DrawLine(nearUpperRightVertex, farUpperRightVertex);
@@ -135,7 +136,7 @@ namespace MathDebbuger
             Gizmos.DrawLine(farLowerLeftVertex, farUpperLeftVertex);
         }
 
-        void SetVertices()
+        private void SetVertices()
         {
             vertices.Add(new Vec3(transform.position));
             vertices.Add(farLowerRightVertex);
@@ -162,7 +163,7 @@ namespace MathDebbuger
             vertices.Add(farUpperRightVertex);
         }
 
-        void UpdateVertices()
+        private void UpdateVertices()
         {
             vertices[0] = new Vec3(transform.position);
             vertices[1] = farLowerRightVertex;
@@ -189,7 +190,7 @@ namespace MathDebbuger
             vertices[17] = farUpperRightVertex;
         }
 
-        public Vector3 GetFaceNormal(int index)
+        private Vector3 GetFaceNormal(int index)
         {
             // https://www.khronos.org/opengl/wiki/Calculating_a_Surface_Normal#:~:text=A%20surface%20normal%20for%20a,of%20the%20face%20w.r.t.%20winding).
             Vector3 firstVertex = vertices[index];
@@ -212,11 +213,40 @@ namespace MathDebbuger
 
         private void SetLines()
         {
-            for (int i = 0; i <= linesAmount; i++)
+            var nearLeftPoint = Vec3.Lerp(nearUpperLeftVertex, nearLowerLeftVertex, 0.5f);
+            var farLeftPoint = Vec3.Lerp(farUpperLeftVertex, farLowerLeftVertex, 0.5f);
+
+            var nearRightPoint = Vec3.Lerp(nearUpperRightVertex, nearUpperRightVertex, 0.5f);
+            var farRightPoint = Vec3.Lerp(farUpperRightVertex, farLowerRightVertex, 0.5f);
+
+            if (lines.Count != linesAmount)
             {
-                lines[i].startPos = nearUpperLeftVertex / 2;
-                lines[i].finalPos = farUpperLeftVertex / 2;
-            
+                List<Line> listAux = new List<Line>();
+                
+                for (var i = 0; i < linesAmount; i++)
+                {
+                    var t = (1.0f / linesAmount) * ((float)i + 1.0f);
+
+                    var newNear = (Vec3.Lerp(nearLeftPoint, nearRightPoint, t));
+                    var newFar = (Vec3.Lerp(farLeftPoint, farRightPoint, t));
+
+                    var newLine = new Line(newNear, newFar);
+                    listAux.Add(newLine);
+                }
+
+                lines = listAux;
+            }
+            else
+            {
+                for (var i = 0; i < linesAmount; i++)
+                {
+                    var t = (1.0f / linesAmount) * ((float)i + 1.0f);
+
+                    var newNear = (Vec3.Lerp(nearLeftPoint, nearRightPoint, t));
+                    var newFar = (Vec3.Lerp(farLeftPoint, farRightPoint, t));
+
+                    lines[i].UpdateLine(newNear, newFar);
+                }
             }
         }
     }

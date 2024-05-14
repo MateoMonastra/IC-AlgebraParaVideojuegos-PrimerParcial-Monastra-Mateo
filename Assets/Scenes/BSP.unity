@@ -357,7 +357,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 47552499}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a99f8fa9a8296bc40893e6fa4223adb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 48981a010f226c14a9d089865eefae47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &60191929
@@ -1313,7 +1313,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 450158920}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c670ac048bc111444808ea67957ac622, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d2f20b81b70bd54e9b9c535d59ca0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   roomWalls:
@@ -1329,7 +1329,6 @@ MonoBehaviour:
   doors:
   - {fileID: 47552504}
   - {fileID: 1004840793}
-  floor: []
 --- !u!4 &450158922
 Transform:
   m_ObjectHideFlags: 0
@@ -1400,7 +1399,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 504086312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c670ac048bc111444808ea67957ac622, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d2f20b81b70bd54e9b9c535d59ca0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   roomWalls:
@@ -1416,7 +1415,6 @@ MonoBehaviour:
   doors:
   - {fileID: 1429517378}
   - {fileID: 47552504}
-  floor: []
 --- !u!1 &535576687
 GameObject:
   m_ObjectHideFlags: 0
@@ -2008,7 +2006,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 641029972}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a99f8fa9a8296bc40893e6fa4223adb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 48981a010f226c14a9d089865eefae47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &748145332
@@ -2058,7 +2056,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 748145332}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c670ac048bc111444808ea67957ac622, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d2f20b81b70bd54e9b9c535d59ca0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   roomWalls:
@@ -2071,7 +2069,6 @@ MonoBehaviour:
   - {fileID: 1341439834}
   doors:
   - {fileID: 641029977}
-  floor: []
 --- !u!1 &798192649
 GameObject:
   m_ObjectHideFlags: 0
@@ -2901,7 +2898,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1004840788}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a99f8fa9a8296bc40893e6fa4223adb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 48981a010f226c14a9d089865eefae47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1057392815
@@ -3955,7 +3952,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1341439832}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c670ac048bc111444808ea67957ac622, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d2f20b81b70bd54e9b9c535d59ca0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   roomWalls:
@@ -3972,7 +3969,6 @@ MonoBehaviour:
   doors:
   - {fileID: 1004840793}
   - {fileID: 641029977}
-  floor: []
 --- !u!1 &1429517373
 GameObject:
   m_ObjectHideFlags: 0
@@ -4088,7 +4084,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1429517373}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a99f8fa9a8296bc40893e6fa4223adb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 48981a010f226c14a9d089865eefae47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1657043195
@@ -4600,7 +4596,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2032541258}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c670ac048bc111444808ea67957ac622, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d2f20b81b70bd54e9b9c535d59ca0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   roomWalls:
@@ -4613,7 +4609,6 @@ MonoBehaviour:
   - {fileID: 504086314}
   doors:
   - {fileID: 1429517378}
-  floor: []
 --- !u!1 &2046165980
 GameObject:
   m_ObjectHideFlags: 0
@@ -4890,10 +4885,10 @@ MonoBehaviour:
   verticalfieldOfViewAngle: 0
   nearClippingPlane: 1
   renderingDistance: 10
-  linesAmount: 5
-  circleAmount: 6
-  circleDistance: 1
-  circleRadius: 2.09
+  linesAmount: 14
+  circleAmount: 0
+  circleDistance: 0
+  circleRadius: 0
   aspectRatio: 0
 --- !u!136 &2140443972
 CapsuleCollider:

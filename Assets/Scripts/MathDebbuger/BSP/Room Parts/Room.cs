@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using MathDebbuger.BSP.Room_Parts;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -14,9 +15,8 @@ namespace MathDebbuger
 
         [Header("Doors: ")] [SerializeField] public List<Door> doors;
 
-        [Header("Floor: ")] [SerializeField] public List<Door> floor;
-
         private Transform player;
+        
         // Start is called before the first frame update
 
         private void Start()

@@ -5,22 +5,27 @@ using UnityEngine;
 
 namespace MathDebbuger
 {
-    public class Line : MonoBehaviour
+    public class Line
     { 
-        private List<Vec3> points;
+        private List<Vec3> points = new List<Vec3>();
         public Vec3 startPos;
         public Vec3 finalPos;
         
         public Line(Vec3 startPos, Vec3 finalPos)
         {
-            startPos = startPos;
-            finalPos = finalPos;
+            this.startPos = startPos;
+            this.finalPos = finalPos;
         }
         
-        public void Update(Vec3 start, Vec3 final)
+        public void UpdateLine(Vec3 start, Vec3 final)
         {
-            startPos = start;
-            finalPos = final;
+            this.startPos = start;
+            this.finalPos = final;
+        }
+
+        public void UpdateBalls()
+        {
+            
         }
         
         public void Draw()
@@ -29,11 +34,11 @@ namespace MathDebbuger
             
             Gizmos.DrawLine(startPos, finalPos);
 
-            foreach (var point in points)
-            {
-                Gizmos.color = new Color(0, 0, 1, 1f);
-                Gizmos.DrawSphere(point, 0.2f);
-            }
+            // foreach (var point in points)
+            // {
+            //     Gizmos.color = new Color(0, 0, 1, 1f);
+            //     Gizmos.DrawSphere(point, 0.2f);
+            // }
         }
 
     }

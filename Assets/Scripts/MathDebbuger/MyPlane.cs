@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace MathDebbuger
 {
-    public class MyPlane : MonoBehaviour
+    public class MyPlane
     {
         private Vec3 normal;
         private float distance;
@@ -88,19 +88,5 @@ namespace MathDebbuger
             return (double)distanceToPoint1 > 0.0 && (double)distanceToPoint2 > 0.0 ||
                    (double)distanceToPoint1 <= 0.0 && (double)distanceToPoint2 <= 0.0;
         }
-
-        // public bool MyRaycast(Ray ray, out float enter)
-        // {
-        //     float a = Vector3.Dot(ray.direction, this.m_Normal);
-        //     float num = -Vector3.Dot(ray.origin, this.m_Normal) - this.m_Distance;
-        //     if (Mathf.Approximately(a, 0.0f))
-        //     {
-        //         enter = 0.0f;
-        //         return false;
-        //     }
-        //
-        //     enter = num / a;
-        //     return (double)enter > 0.0;
-        // }
     }
 }
