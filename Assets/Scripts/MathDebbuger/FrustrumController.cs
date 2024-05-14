@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Vector3 = UnityEngine.Vector3;
 
 namespace MathDebbuger
@@ -15,12 +16,11 @@ namespace MathDebbuger
         [SerializeField] float renderingDistance;
 
         [Header("LINES: ")] [SerializeField] private int linesAmount;
-        [SerializeField] private int circleAmount;
-        [SerializeField] private int circleDistance;
-        [SerializeField] private float circleRadius;
+        [SerializeField] private int amountPoints;
+        [SerializeField] private float circleSpacing;
         private List<Line> lines = new List<Line>();
 
-        [SerializeField] float aspectRatio;
+        float aspectRatio;
         // Start is called before the first frame update
 
         Vec3 farLimit;
@@ -222,7 +222,7 @@ namespace MathDebbuger
             if (lines.Count != linesAmount)
             {
                 List<Line> listAux = new List<Line>();
-                
+
                 for (var i = 0; i < linesAmount; i++)
                 {
                     var t = (1.0f / linesAmount) * ((float)i + 1.0f);
@@ -230,7 +230,7 @@ namespace MathDebbuger
                     var newNear = (Vec3.Lerp(nearLeftPoint, nearRightPoint, t));
                     var newFar = (Vec3.Lerp(farLeftPoint, farRightPoint, t));
 
-                    var newLine = new Line(newNear, newFar);
+                    var newLine = new Line(newNear, newFar, amountPoints, circleSpacing);
                     listAux.Add(newLine);
                 }
 
@@ -245,7 +245,7 @@ namespace MathDebbuger
                     var newNear = (Vec3.Lerp(nearLeftPoint, nearRightPoint, t));
                     var newFar = (Vec3.Lerp(farLeftPoint, farRightPoint, t));
 
-                    lines[i].UpdateLine(newNear, newFar);
+                    lines[i].UpdateLine(newNear, newFar, amountPoints, circleSpacing);
                 }
             }
         }
