@@ -118,9 +118,9 @@ namespace MathDebbuger
 
         public Vec3 Ejercicio3()
         {
-            a.Scale(b);
-
-            return a;
+            var aux = a;
+            aux.Scale(b);
+            return aux;
         }
 
         public Vec3 Ejercicio4()
@@ -151,6 +151,7 @@ namespace MathDebbuger
         public Vec3 Ejercicio7()
         {
             return Vec3.Project(a, b);
+            //corregir
         }
 
         public Vec3 Ejercicio8()
