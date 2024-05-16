@@ -31,6 +31,9 @@ namespace MathDebbuger
         private Vec3 b;
         private Vec3 r;
 
+        private float elapsedTime;
+        private float totalDuration;
+        
         private void Update()
         {
             a = new Vec3(A);
@@ -127,9 +130,8 @@ namespace MathDebbuger
 
         public Vec3 Ejercicio5()
         {
-            var elapsedTime = Time.deltaTime;
-
-            float totalDuration = 1.0f;
+            elapsedTime += Time.deltaTime;
+            totalDuration = 1.0f;
             
             float t = Mathf.Clamp01(elapsedTime / totalDuration);
 
