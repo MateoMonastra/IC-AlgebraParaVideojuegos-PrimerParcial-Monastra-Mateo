@@ -225,37 +225,65 @@ namespace MathDebbuger
             //
             // var nearRightPoint = Vec3.Lerp(nearUpperRightVertex, nearUpperRightVertex, 0.5f);
             // var farRightPoint = Vec3.Lerp(farUpperRightVertex, farLowerRightVertex, 0.5f);
-            
-                List<List<Line>> ListAux = new List<List<Line>>();
-                List<Line> listAux = new List<Line>();
 
-                for (int i = 1; i < linesAmountV+1; i++)
+            List<List<Line>> ListAux = new List<List<Line>>();
+            List<Line> listAux = new List<Line>();
+
+            for (int i = 1; i < linesAmountV + 1; i++)
+            {
+                Vec3 nearLeftPoint;
+                Vec3 farLeftPoint;
+                Vec3 nearRightPoint;
+                Vec3 farRightPoint;
+
+                if (linesAmountV == 1)
                 {
-                    var nearLeftPoint = Vec3.Lerp(nearUpperLeftVertex, nearLowerLeftVertex,
+                    nearLeftPoint = Vec3.Lerp(nearUpperLeftVertex, nearLowerLeftVertex,
                         0.5f / linesAmountV * (float)i);
-                    var farLeftPoint = Vec3.Lerp(farUpperLeftVertex, farLowerLeftVertex,
-                        0.5f / linesAmountV * (float)i);
-
-                    var nearRightPoint = Vec3.Lerp(nearUpperRightVertex, nearLowerRightVertex,
-                        0.5f / linesAmountV * (float)i);
-                    var farRightPoint = Vec3.Lerp(farUpperRightVertex, farLowerRightVertex,
+                    farLeftPoint = Vec3.Lerp(farUpperLeftVertex, farLowerLeftVertex,
                         0.5f / linesAmountV * (float)i);
 
-                    for (var j = 0; j < linesAmountH; j++)
-                    {
-                        var t = (1.0f / linesAmountH) * ((float)j + 1.0f);
+                    nearRightPoint = Vec3.Lerp(nearUpperRightVertex, nearLowerRightVertex,
+                        0.5f / linesAmountV * (float)i);
+                    farRightPoint = Vec3.Lerp(farUpperRightVertex, farLowerRightVertex,
+                        0.5f / linesAmountV * (float)i);
+                }
+                else
+                {
+                    nearLeftPoint = Vec3.Lerp(nearUpperLeftVertex, nearLowerLeftVertex,
+                        1.0f / linesAmountV * (float)i);
+                    farLeftPoint = Vec3.Lerp(farUpperLeftVertex, farLowerLeftVertex,
+                        1.0f / linesAmountV * (float)i);
 
-                        var newNear = (Vec3.Lerp(nearLeftPoint, nearRightPoint, t));
-                        var newFar = (Vec3.Lerp(farLeftPoint, farRightPoint, t));
-
-                        var newLine = new Line(newNear, newFar, amountPoints, pointSpacing);
-                        listAux.Add(newLine);
-                    }
-
-                    ListAux.Add(listAux);
+                    nearRightPoint = Vec3.Lerp(nearUpperRightVertex, nearLowerRightVertex,
+                        1.0f / linesAmountV * (float)i);
+                    farRightPoint = Vec3.Lerp(farUpperRightVertex, farLowerRightVertex,
+                        1.0f / linesAmountV * (float)i);
                 }
 
-                Lines = ListAux;
+                for (var j = 0; j < linesAmountH; j++)
+                {
+                    float t;
+                    if (linesAmountH == 1)
+                    {
+                        t = (0.5f / linesAmountH) * ((float)j + 1.0f);
+                    }
+                    else
+                    {
+                        t = (1.0f / linesAmountH) * ((float)j + 1.0f);
+                    }
+
+                    var newNear = (Vec3.Lerp(nearLeftPoint, nearRightPoint, t));
+                    var newFar = (Vec3.Lerp(farLeftPoint, farRightPoint, t));
+
+                    var newLine = new Line(newNear, newFar, amountPoints, pointSpacing);
+                    listAux.Add(newLine);
+                }
+
+                ListAux.Add(listAux);
+            }
+
+            Lines = ListAux;
         }
     }
 }
