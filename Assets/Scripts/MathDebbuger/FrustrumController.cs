@@ -220,12 +220,6 @@ namespace MathDebbuger
 
         private void SetLines()
         {
-            // var nearLeftPoint = Vec3.Lerp(nearUpperLeftVertex, nearLowerLeftVertex, 0.5f);
-            // var farLeftPoint = Vec3.Lerp(farUpperLeftVertex, farLowerLeftVertex, 0.5f);
-            //
-            // var nearRightPoint = Vec3.Lerp(nearUpperRightVertex, nearUpperRightVertex, 0.5f);
-            // var farRightPoint = Vec3.Lerp(farUpperRightVertex, farLowerRightVertex, 0.5f);
-
             List<List<Line>> ListAux = new List<List<Line>>();
             List<Line> listAux = new List<Line>();
 

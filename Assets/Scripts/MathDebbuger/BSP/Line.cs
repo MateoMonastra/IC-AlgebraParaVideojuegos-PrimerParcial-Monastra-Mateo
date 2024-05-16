@@ -36,7 +36,7 @@ namespace MathDebbuger
                 List<Point> listAux = new List<Point>();
                 for (int i = 0; i < amountPoints; i++)
                 {
-                    var place = Vec3.Lerp(startPos, finalPos, spacing * (i + 1));
+                    var place = Vec3.Lerp(finalPos, startPos, spacing * (i + 1));
 
                     var newPoint = new Point(place);
                     listAux.Add(newPoint);
@@ -48,7 +48,7 @@ namespace MathDebbuger
             {
                 for (int i = 0; i < amountPoints; i++)
                 {
-                    points[i] = new Point(Vec3.Lerp(startPos, finalPos, spacing * (i)));
+                    points[i] = new Point(Vec3.Lerp(finalPos, startPos, spacing * (i)));
                 }
             }
         }
