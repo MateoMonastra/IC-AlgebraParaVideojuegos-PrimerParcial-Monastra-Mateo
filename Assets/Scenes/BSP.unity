@@ -4932,7 +4932,7 @@ MonoBehaviour:
   nearClippingPlane: 1
   renderingDistance: 10
   verticalfieldOfViewAngle: 0
-  linesAmountH: 18
+  linesAmountH: 1
   linesAmountV: 1
   amountPoints: 14
   pointSpacing: 0.07
@@ -5018,7 +5018,7 @@ Transform:
   m_GameObject: {fileID: 2140443970}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -9.04, y: 1.154, z: 8.124522}
+  m_LocalPosition: {x: -8.694, y: 1.154, z: 8.93}
   m_LocalScale: {x: 1, y: 0.24357, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
