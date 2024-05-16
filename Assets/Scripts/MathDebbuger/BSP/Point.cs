@@ -6,8 +6,6 @@ namespace MathDebbuger.BSP
     {
         public Vec3 position;
         public float radius = 0.13f;
-        
-        // private SphereCollider collider;
 
         public Point(Vec3 newPosition)
         {

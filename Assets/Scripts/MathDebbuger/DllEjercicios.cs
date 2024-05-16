@@ -165,7 +165,15 @@ namespace MathDebbuger
 
         public Vec3 Ejercicio10()
         {
-            return Vec3.Zero;
+            elapsedTime += Time.deltaTime;
+            totalDuration = 10.0f;
+
+            Vec3 result = Vec3.LerpUnclamped(b,a, elapsedTime);
+            
+            if (elapsedTime >= totalDuration)
+                elapsedTime = 0.0f;
+
+            return result;
         }
     }
 }

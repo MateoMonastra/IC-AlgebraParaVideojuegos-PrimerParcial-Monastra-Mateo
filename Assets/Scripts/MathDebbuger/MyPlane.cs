@@ -85,8 +85,8 @@ namespace MathDebbuger
         {
             float distanceToPoint1 = this.GetDistanceToPoint(inPt0);
             float distanceToPoint2 = this.GetDistanceToPoint(inPt1);
-            return (double)distanceToPoint1 > 0.0 && (double)distanceToPoint2 > 0.0 ||
-                   (double)distanceToPoint1 <= 0.0 && (double)distanceToPoint2 <= 0.0;
+            return (double)distanceToPoint1 > 0.0 && (double)distanceToPoint2 > 0.0 
+                   || (double)distanceToPoint1 <= 0.0 && (double)distanceToPoint2 <= 0.0;
         }
     }
 }

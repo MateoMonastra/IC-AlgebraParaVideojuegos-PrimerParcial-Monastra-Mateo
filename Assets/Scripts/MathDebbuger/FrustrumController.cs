@@ -220,7 +220,7 @@ namespace MathDebbuger
 
         private void SetLines()
         {
-            List<List<Line>> ListAux = new List<List<Line>>();
+            List<List<Line>> ListofListAux = new List<List<Line>>();
             List<Line> listAux = new List<Line>();
 
             for (int i = 1; i < linesAmountV + 1; i++)
@@ -274,10 +274,10 @@ namespace MathDebbuger
                     listAux.Add(newLine);
                 }
 
-                ListAux.Add(listAux);
+                ListofListAux.Add(listAux);
             }
 
-            Lines = ListAux;
+            Lines = ListofListAux;
         }
     }
 }

@@ -5,7 +5,7 @@ namespace MathDebbuger.BSP.Room_Parts
     public class Wall : MonoBehaviour
     {
         public MyPlane plane;
-        // Start is called before the first frame update
+
         void Start()
         {
             plane = new MyPlane(new Vec3(transform.forward), new Vec3(transform.position));
