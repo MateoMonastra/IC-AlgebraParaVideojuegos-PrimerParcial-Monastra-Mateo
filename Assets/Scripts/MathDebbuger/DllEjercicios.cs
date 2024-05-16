@@ -5,44 +5,37 @@ using UnityEngine.Serialization;
 
 namespace MathDebbuger
 {
-    [SerializeField]
-    enum Ejercicios
-    {
-        UNO = 1,
-        DOS,
-        TRES,
-        CUATRO,
-        CINCO,
-        SEIS,
-        SIETE,
-        OCHO,
-        NUEVE,
-        DIEZ
-    }
-
     public class DllEjercicios : MonoBehaviour
     {
+        [SerializeField]
+        enum Ejercicios
+        {
+            UNO = 1,
+            DOS,
+            TRES,
+            CUATRO,
+            CINCO,
+            SEIS,
+            SIETE,
+            OCHO,
+            NUEVE,
+            DIEZ
+        }
+
         [SerializeField] private Ejercicios exercise;
 
         [SerializeField] private Vector3 A;
         [SerializeField] private Vector3 B;
-        private Vector3 R;
 
         private Vec3 a;
         private Vec3 b;
         private Vec3 r;
 
-        public void Init()
+        private void Update()
         {
             a = new Vec3(A);
             b = new Vec3(B);
-            r = new Vec3(R);
-        }
-
-        private void Update()
-        {
-            Init();
-
+            
             switch (exercise)
             {
                 case Ejercicios.UNO:
@@ -98,24 +91,38 @@ namespace MathDebbuger
             }
         }
 
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = new Color(1, 1, 1, 1f);
+            Gizmos.DrawLine(transform.position, transform.position + a);
+
+            Gizmos.color = new Color(0, 0, 0, 1f);
+            Gizmos.DrawLine(transform.position, transform.position + b);
+
+            Gizmos.color = new Color(1, 0, 0, 1f);
+            Gizmos.DrawLine(transform.position, transform.position + r);
+        }
+
         public Vec3 Ejercicio1()
         {
-            return Vec3.Zero;
+            return a + b;
         }
 
         public Vec3 Ejercicio2()
         {
-            return Vec3.Zero;
+            return b - a;
         }
 
         public Vec3 Ejercicio3()
         {
-            return Vec3.Zero;
+            a.Scale(b);
+
+            return a;
         }
 
         public Vec3 Ejercicio4()
         {
-            return Vec3.Zero;
+            return Vec3.Cross(b, a);
         }
 
         public Vec3 Ejercicio5()
