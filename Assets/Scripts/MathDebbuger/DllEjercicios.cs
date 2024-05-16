@@ -127,17 +127,28 @@ namespace MathDebbuger
 
         public Vec3 Ejercicio5()
         {
-            return Vec3.Zero;
+            var elapsedTime = Time.deltaTime;
+
+            float totalDuration = 1.0f;
+            
+            float t = Mathf.Clamp01(elapsedTime / totalDuration);
+
+            Vec3 result = Vec3.Lerp(a, b, t);
+
+            if (t >= 1.0f)
+                elapsedTime = 0.0f;
+            
+            return result;
         }
 
         public Vec3 Ejercicio6()
         {
-            return Vec3.Zero;
+            return Vec3.Max(a, b);
         }
 
         public Vec3 Ejercicio7()
         {
-            return Vec3.Zero;
+            return Vec3.Project(a, b);
         }
 
         public Vec3 Ejercicio8()
