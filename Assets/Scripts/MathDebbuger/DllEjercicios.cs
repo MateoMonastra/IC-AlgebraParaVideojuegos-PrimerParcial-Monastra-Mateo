@@ -26,19 +26,19 @@ namespace MathDebbuger
 
         [SerializeField] private Vector3 A;
         [SerializeField] private Vector3 B;
+        [SerializeField] private Vec3 r;
 
         private Vec3 a;
         private Vec3 b;
-        private Vec3 r;
 
         private float elapsedTime;
         private float totalDuration;
-        
+
         private void Update()
         {
             a = new Vec3(A);
             b = new Vec3(B);
-            
+
             switch (exercise)
             {
                 case Ejercicios.UNO:
@@ -132,14 +132,14 @@ namespace MathDebbuger
         {
             elapsedTime += Time.deltaTime;
             totalDuration = 1.0f;
-            
+
             float t = Mathf.Clamp01(elapsedTime / totalDuration);
 
             Vec3 result = Vec3.Lerp(a, b, t);
 
             if (t >= 1.0f)
                 elapsedTime = 0.0f;
-            
+
             return result;
         }
 
@@ -151,7 +151,6 @@ namespace MathDebbuger
         public Vec3 Ejercicio7()
         {
             return Vec3.Project(a, b);
-            //corregir
         }
 
         public Vec3 Ejercicio8()

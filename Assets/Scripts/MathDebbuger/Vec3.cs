@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace MathDebbuger
 {
+    [System.Serializable]
     public struct Vec3 : IEquatable<Vec3>
     {
         #region Variables
@@ -285,12 +286,13 @@ namespace MathDebbuger
 
         public static Vec3 Project(Vec3 vector, Vec3 onNormal)
         {
-            if (onNormal.magnitude < 0.0001f)
+            if (SqrMagnitude(onNormal) < Mathf.Epsilon)
                 return Vec3.Zero;
-            
-            Vec3 projection = Vec3.Dot(vector, onNormal) / onNormal.magnitude * onNormal;
 
-            return projection;
+            float dot = Vec3.Dot(vector, onNormal);
+            var project = onNormal * dot / SqrMagnitude(onNormal);
+
+            return project;
         }
 
         public static Vec3 Reflect(Vec3 inDirection, Vec3 inNormal)
