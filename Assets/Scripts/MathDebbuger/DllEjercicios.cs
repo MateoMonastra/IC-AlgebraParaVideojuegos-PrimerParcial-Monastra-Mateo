@@ -160,7 +160,7 @@ namespace MathDebbuger
 
         public Vec3 Ejercicio9()
         {
-            return Vec3.Zero;
+            return Vec3.Reflect(a, Vec3.Normalize(b));
         }
 
         public Vec3 Ejercicio10()
