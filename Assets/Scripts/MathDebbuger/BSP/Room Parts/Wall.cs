@@ -18,9 +18,9 @@ namespace MathDebbuger.BSP.Room_Parts
             
         }
 
-        public bool IsOnSide(Transform player)
+        public bool IsOnSide(Vec3 player)
         {
-            return plane.GetSide(new Vec3(player.position));
+            return plane.GetSide(player);
         }
     }
 }

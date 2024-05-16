@@ -252,36 +252,15 @@ GameObject:
   - component: {fileID: 47552503}
   - component: {fileID: 47552502}
   - component: {fileID: 47552501}
-  - component: {fileID: 47552500}
   - component: {fileID: 47552504}
+  - component: {fileID: 47552505}
   m_Layer: 0
   m_Name: Door1-3
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &47552500
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 47552499}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &47552501
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -340,13 +319,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47552499}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0.0043770974, y: 0.7027979, z: -0.004510516, w: 0.71136177}
   m_LocalPosition: {x: -4.678, y: 1.783, z: 9.118}
   m_LocalScale: {x: 1.6433467, y: 2.4134488, z: 0.41917777}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.006, y: 89.306, z: -0.72}
 --- !u!114 &47552504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,6 +338,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48981a010f226c14a9d089865eefae47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 1
+  roomsConected:
+  - {fileID: 504086314}
+  - {fileID: 450158921}
+  mesh: {fileID: 47552505}
+--- !u!64 &47552505
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47552499}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &60191929
 GameObject:
   m_ObjectHideFlags: 0
@@ -1315,7 +1321,7 @@ MonoBehaviour:
   - {fileID: 39286230}
   - {fileID: 880403584}
   - {fileID: 60191930}
-  adjacents:
+  adjacent:
   - {fileID: 504086314}
   - {fileID: 1341439834}
   doors:
@@ -1401,7 +1407,7 @@ MonoBehaviour:
   - {fileID: 2131490031}
   - {fileID: 611208101}
   - {fileID: 1235481671}
-  adjacents:
+  adjacent:
   - {fileID: 2032541260}
   - {fileID: 450158921}
   doors:
@@ -1890,36 +1896,15 @@ GameObject:
   - component: {fileID: 641029976}
   - component: {fileID: 641029975}
   - component: {fileID: 641029974}
-  - component: {fileID: 641029973}
   - component: {fileID: 641029977}
+  - component: {fileID: 641029978}
   m_Layer: 0
   m_Name: Door4-5
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &641029973
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 641029972}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &641029974
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1997,6 +1982,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48981a010f226c14a9d089865eefae47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 1
+  roomsConected:
+  - {fileID: 1341439834}
+  - {fileID: 748145334}
+  mesh: {fileID: 641029978}
+--- !u!64 &641029978
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641029972}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &748145332
 GameObject:
   m_ObjectHideFlags: 0
@@ -2053,8 +2065,8 @@ MonoBehaviour:
   - {fileID: 920616063}
   - {fileID: 120880048}
   - {fileID: 263246849}
-  adjacents:
-  - {fileID: 1341439834}
+  adjacent:
+  - {fileID: 748145334}
   doors:
   - {fileID: 641029977}
 --- !u!1 &798192649
@@ -2776,36 +2788,15 @@ GameObject:
   - component: {fileID: 1004840792}
   - component: {fileID: 1004840791}
   - component: {fileID: 1004840790}
-  - component: {fileID: 1004840789}
   - component: {fileID: 1004840793}
+  - component: {fileID: 1004840794}
   m_Layer: 0
   m_Name: Door3-4
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1004840789
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1004840788}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1004840790
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2883,6 +2874,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48981a010f226c14a9d089865eefae47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
+  roomsConected:
+  - {fileID: 450158921}
+  - {fileID: 1341439834}
+  mesh: {fileID: 1004840794}
+--- !u!64 &1004840794
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004840788}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1057392815
 GameObject:
   m_ObjectHideFlags: 0
@@ -3265,7 +3283,7 @@ Transform:
   m_GameObject: {fileID: 1150975848}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.32, y: -1.29, z: 5.73}
+  m_LocalPosition: {x: 3.32, y: -1.26, z: 5.73}
   m_LocalScale: {x: 8.027093, y: 0.17699, z: 11.19}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3769,7 +3787,7 @@ Transform:
   m_GameObject: {fileID: 1316413379}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.40400004, z: 0.38}
+  m_LocalPosition: {x: -0, y: 0.40400004, z: 0.694}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3940,7 +3958,7 @@ MonoBehaviour:
   - {fileID: 604553715}
   - {fileID: 161384442}
   - {fileID: 562609068}
-  adjacents:
+  adjacent:
   - {fileID: 450158921}
   - {fileID: 748145334}
   doors:
@@ -3957,36 +3975,15 @@ GameObject:
   - component: {fileID: 1429517377}
   - component: {fileID: 1429517376}
   - component: {fileID: 1429517375}
-  - component: {fileID: 1429517374}
   - component: {fileID: 1429517378}
+  - component: {fileID: 1429517379}
   m_Layer: 0
   m_Name: Door1-2
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1429517374
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429517373}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1429517375
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4064,6 +4061,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48981a010f226c14a9d089865eefae47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
+  roomsConected:
+  - {fileID: 504086314}
+  - {fileID: 2032541260}
+  mesh: {fileID: 1429517379}
+--- !u!64 &1429517379
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429517373}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1657043195
 GameObject:
   m_ObjectHideFlags: 0
@@ -4523,6 +4547,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf343a9ed6d4b44bf47659a434b4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2029449762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2029449764}
+  - component: {fileID: 2029449763}
+  m_Layer: 0
+  m_Name: RoomManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2029449763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029449762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52c7ab4b463aa824bb9ad90162e11f93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rooms:
+  - {fileID: 504086314}
+  - {fileID: 2032541260}
+  - {fileID: 450158921}
+  - {fileID: 1341439834}
+  - {fileID: 748145334}
+  player: {fileID: 2140443970}
+--- !u!4 &2029449764
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029449762}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.596652, y: 2.0741322, z: 5.7748}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2032541258
 GameObject:
   m_ObjectHideFlags: 0
@@ -4579,7 +4654,7 @@ MonoBehaviour:
   - {fileID: 1932124329}
   - {fileID: 976518635}
   - {fileID: 948418378}
-  adjacents:
+  adjacent:
   - {fileID: 504086314}
   doors:
   - {fileID: 1429517378}
@@ -4854,14 +4929,13 @@ MonoBehaviour:
   screenWidth: 1920
   screenHeight: 1080
   fieldOfViewAngle: 60
-  verticalfieldOfViewAngle: 0
   nearClippingPlane: 1
   renderingDistance: 10
-  linesAmount: 18
-  amountPoints: 9
-  circleDistance: 0
-  circleRadius: 0
-  aspectRatio: 0
+  verticalfieldOfViewAngle: 0
+  linesAmountH: 18
+  linesAmountV: 1
+  amountPoints: 14
+  pointSpacing: 0.07
 --- !u!136 &2140443972
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4944,7 +5018,7 @@ Transform:
   m_GameObject: {fileID: 2140443970}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -10.17, y: 1.154, z: 8.124522}
+  m_LocalPosition: {x: -9.04, y: 1.154, z: 8.124522}
   m_LocalScale: {x: 1, y: 0.24357, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5179,13 +5253,14 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 381901154}
+  - {fileID: 2029449764}
   - {fileID: 748145333}
   - {fileID: 1341439833}
   - {fileID: 450158922}
   - {fileID: 2032541259}
   - {fileID: 504086313}
-  - {fileID: 2140443975}
   - {fileID: 1429517377}
   - {fileID: 1004840792}
   - {fileID: 641029976}
   - {fileID: 47552503}
+  - {fileID: 2140443975}

@@ -8,14 +8,16 @@ namespace MathDebbuger
 {
     public class Room : MonoBehaviour
     {
-        [Header("Walls: ")] [SerializeField] public List<Wall> roomWalls;
+        [Header("Walls: ")] 
+        [SerializeField] public List<Wall> roomWalls;
 
-        [Header("Adjacents: ")] [SerializeField]
-        public List<Room> adjacents;
+        [Header("Adjacent: ")]
+        [SerializeField] public List<Room> adjacent;
 
-        [Header("Doors: ")] [SerializeField] public List<Door> doors;
+        [Header("Doors: ")]
+        [SerializeField] public List<Door> doors;
 
-        public bool CheckIsPointInside(Transform position)
+        public bool IsPointInside(Vec3 position)
         {
             int count = 0;
             
@@ -29,5 +31,7 @@ namespace MathDebbuger
             
             return count == roomWalls.Count;
         }
+        
+        
     }
 }
