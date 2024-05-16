@@ -155,7 +155,15 @@ namespace MathDebbuger
 
         public Vec3 Ejercicio8()
         {
-            return Vec3.Zero;
+            var time = 0.5f; 
+
+            Vec3 result = Vec3.Lerp(a, b, time);
+
+            var distance = Vec3.Distance(a, b);
+
+            Vec3 scaledResult = Vec3.Normalize(result) * distance;
+
+            return scaledResult;
         }
 
         public Vec3 Ejercicio9()
