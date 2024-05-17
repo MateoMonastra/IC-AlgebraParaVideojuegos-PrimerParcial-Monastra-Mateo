@@ -25,7 +25,6 @@ namespace MathDebbuger
         public List<List<Line>> Lines = new List<List<Line>>();
 
         float aspectRatio;
-        // Start is called before the first frame update
 
         Vec3 farLimit;
         Vec3 nearLimit;
